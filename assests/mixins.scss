@@ -1,0 +1,180 @@
+@mixin page_margins {
+  margin: 20vh 50px 10px; // T L B R
+  padding: 10px;
+}
+
+@mixin page_container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+@mixin page_container_content_columns {
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+}
+
+@mixin text_div_styles {
+  padding: 10px;
+  align-items: center;
+}
+
+
+@mixin social_media_icon_design {
+  // color: $color-second_text;
+  color: $line_color;
+  animation: rotation 9s infinite linear;
+}
+
+@mixin social_media_icon_menu {
+  display: flex;
+  list-style-type: none; // ul dot remove //
+  color: $color-second_text;
+
+}
+
+@mixin glass_morphism_background {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.4px);
+  -webkit-backdrop-filter: blur(1.4px);
+  border: 1px solid rgb(43, 255, 0, 1);
+}
+
+//* buttons style  //
+
+@mixin button_cybre-btn {
+  --primary: hsl(var(--primary-hue),
+      85%,
+      calc(var(--primary-lightness, 50) * 1%));
+  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+  --primary-hue: 120;
+  --primary-lightness: 50;
+  --color: hsl(0, 0%, 100%);
+  --font-size: 1rem;
+  --shadow-primary-hue: 180;
+  --label-size: 9px;
+  --shadow-secondary-hue: 60;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+  --clip: polygon(0 0,
+      100% 0,
+      100% 100%,
+      95% 100%,
+      95% 90%,
+      85% 90%,
+      85% 100%,
+      8% 100%,
+      0 70%);
+  --border: 2px;
+  --shimmy-distance: 5;
+  --clip-one: polygon(0 2%,
+      100% 2%,
+      100% 95%,
+      95% 95%,
+      95% 90%,
+      85% 90%,
+      85% 95%,
+      8% 95%,
+      0 70%);
+  --clip-two: polygon(0 78%,
+      100% 78%,
+      100% 100%,
+      95% 100%,
+      95% 90%,
+      85% 90%,
+      85% 100%,
+      8% 100%,
+      0 78%);
+  --clip-three: polygon(0 44%,
+      100% 44%,
+      100% 54%,
+      95% 54%,
+      95% 54%,
+      85% 54%,
+      85% 54%,
+      8% 54%,
+      0 54%);
+  --clip-four: polygon(0 0,
+      100% 0,
+      100% 0,
+      95% 0,
+      95% 0,
+      85% 0,
+      85% 0,
+      8% 0,
+      0 0);
+  --clip-five: polygon(0 0,
+      100% 0,
+      100% 0,
+      95% 0,
+      95% 0,
+      85% 0,
+      85% 0,
+      8% 0,
+      0 0);
+  --clip-six: polygon(0 40%,
+      100% 40%,
+      100% 85%,
+      95% 85%,
+      95% 85%,
+      85% 85%,
+      85% 85%,
+      8% 85%,
+      0 70%);
+  --clip-seven: polygon(0 63%,
+      100% 63%,
+      100% 80%,
+      95% 80%,
+      95% 80%,
+      85% 80%,
+      85% 80%,
+      8% 80%,
+      0 70%);
+  font-family: 'Cyber', sans-serif;
+  color: var(--color);
+  cursor: pointer;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  outline: transparent;
+  letter-spacing: 2px;
+  position: relative;
+  font-weight: 200;
+  border: 0;
+  min-width: 200px;
+  height: 50px;
+  line-height: 2.5;
+  transition: background 0.2s;
+}
+
+@mixin cybr_btn_hover {
+  --primary: hsl(var(--primary-hue),
+      85%,
+      calc(var(--primary-lightness, 50) * 0.8%));
+}
+
+
+//*  mobile mixins //
+
+@mixin mobile_page_margin{
+margin : 12vh 1rem;
+height :100%;
+}
+
+@mixin mobile_page_container{
+  display : flex;
+  flex-direction: column;
+  justify-content:center;
+  height : 100%;
+  width:100%;
+  padding:0;
+  margin:0;
+}
+
+@mixin section_devider{
+  margin: 2.5vh 0;
+  padding: 2.5vh 0;
+}

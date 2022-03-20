@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,700&family=Open+Sans:ital,wght@1,300&family=Roboto+Serif:wght@200&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Serif', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.app {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes circle-loading {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/*# sourceMappingURL=default.css.map */

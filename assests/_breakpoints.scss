@@ -1,0 +1,18 @@
+ //! Breakpoints - https://devfacts.com/media-queries-breakpoints-2021/ // 
+
+$breakpoints : (
+    mobile : 768px,
+     tablet : 992px,
+);
+
+@mixin mobile-only{
+    @media(max-width : map-get($breakpoints,mobile)){
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media(min-width : map-get($breakpoints,tablet)){
+        @content;
+    }
+}
