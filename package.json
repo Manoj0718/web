@@ -2,7 +2,8 @@
   "name": "protfolio",
   "version": "1.0.0",
   "engines": {
-    "node": "14.x"
+    "node": "14.15.30",
+    "npm" :"8.0.0"
   },
   "private": true,
   "scripts": {
