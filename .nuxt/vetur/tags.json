@@ -1,0 +1,44 @@
+{
+  "AboutComponent": {
+    "description": "Auto imported from components/AboutComponent.vue"
+  },
+  "Animeconatct": {
+    "description": "Auto imported from components/animeconatct.vue"
+  },
+  "ContactComponent": {
+    "description": "Auto imported from components/ContactComponent.vue"
+  },
+  "ContactForm": {
+    "description": "Auto imported from components/ContactForm.vue"
+  },
+  "LetConnectAnime": {
+    "description": "Auto imported from components/LetConnectAnime.vue"
+  },
+  "MainHeader": {
+    "description": "Auto imported from components/MainHeader.vue"
+  },
+  "MySkillComponenet": {
+    "description": "Auto imported from components/MySkillComponenet.vue"
+  },
+  "ParticelsComponennt": {
+    "description": "Auto imported from components/ParticelsComponennt.vue"
+  },
+  "ProtfolioComponent": {
+    "description": "Auto imported from components/ProtfolioComponent.vue"
+  },
+  "SideBar": {
+    "description": "Auto imported from components/SideBar.vue"
+  },
+  "SocialMedia": {
+    "description": "Auto imported from components/SocialMedia.vue"
+  },
+  "SocialMediaContact": {
+    "description": "Auto imported from components/SocialMediaContact.vue"
+  },
+  "TextSide": {
+    "description": "Auto imported from components/textSide.vue"
+  },
+  "UsedTechComponent": {
+    "description": "Auto imported from components/UsedTechComponent.vue"
+  }
+}
