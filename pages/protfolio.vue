@@ -11,26 +11,36 @@
           <br />
           <br />
         </p>
-        <h2>what i learned</h2>
-        <br />
-        <ul v-for="lesson in blog.fields.lessons" :key="lesson" style="list-style-type: none">
-          <li>{{ lesson }}</li>
-        </ul>
-        <br />
 
-        <div class="used_tech_div">
-          <h3>Tech stack used in this project</h3>
-          <UsedTechComponent :post="blog"></UsedTechComponent>
+        <span v-if="readMore"></span>
+        <span v-else></span>
+        <div v-show="readMore">
+          <h2>what i learned</h2>
+          <br />
+          <ul v-for="lesson in blog.fields.lessons" :key="lesson" style="list-style-type: none">
+            <li>{{ lesson }}</li>
+          </ul>
+          <br />
+
+          <div class="used_tech_div">
+            <h3>Tech stack used in this project</h3>
+            <!-- //* adding lazy , for speed loading // -->
+            <LazyUsedTechComponent :post="blog"></LazyUsedTechComponent>
+          </div>
+
+          <!-- //* button *// -->
+          <div class="buttons_protofolio">
+            <a class="cybr-btn" :href="blog.fields.github" target="_blank">GitHub</a>
+
+            <template v-if="blog.fields.liveLink !== 'none'">
+              <a class="cybr-btn" :href="blog.fields.liveLink" target="_blank">Watch It Live_</a>
+            </template>
+          </div>
         </div>
-
-        <!-- //* button *// -->
-        <div class="buttons_protofolio">
-          <a class="cybr-btn" :href="blog.fields.github" target="_blank">GitHub</a>
-
-          <template v-if="blog.fields.liveLink !== 'none'">
-            <a class="cybr-btn" :href="blog.fields.liveLink" target="_blank">Watch It Live_</a>
-          </template>
-        </div>
+        <button @click.prevent="readMore = !readMore" class="btn">
+          <span v-if="readMore">Read Less</span>
+          <span v-else>Read More</span>
+        </button>
       </div>
     </div>
   </div>
@@ -44,27 +54,18 @@ export default {
   data() {
     return {
       blogs: [],
+      readMore: false
     }
   },
 
   asyncData({ env }) {
     return Promise.all([
-      // client.getEntries({
-      //    'content_type': 'blog',
-      //       order: '-sys.createdAt'
-      // }),
       client.getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt',
       }),
     ])
       .then(([blogs]) => {
-        console.log('full items  : ', blogs.items[1])
-        console.log('item01 : ', blogs.items[0].fields.img.fields.file.url)
-        //console.log("itemsno image : " , blogs.items[0].fields.image.fields.file.fileName);
-        //console.log("lessons : ", blogs.items[0].fields);
-        console.log('single item : ', blogs.items[0])
-
         return {
           blogs: blogs.items,
         }
@@ -151,6 +152,14 @@ export default {
         .cybr-btn:hover {
           background: $line_color;
         }
+      }
+      .btn {
+        @include button_cybre-btn;
+        border: $border;
+        margin: 10px;
+        text-align: center;
+        background-color: $line_color;
+        font-weight: bold;
       }
       @media screen and (max-width: map-get($breakpoints,mobile)) {
         text-align: center;

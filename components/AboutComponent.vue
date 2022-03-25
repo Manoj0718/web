@@ -5,10 +5,6 @@
       <div class="skill">
         <MySkillComponenet></MySkillComponenet>
       </div>
-      <!-- <img
-          src="../assests/Photoes/web_Developer _Bilzen_Hasselt.jpg"
-          alt="" title=""
-      />-->
     </div>
     <div class="content_side">
       <div class="text">

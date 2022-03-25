@@ -6,6 +6,7 @@
           <img
             src="../assests/Photoes/For-Website_logo_110-JPG.jpg"
             alt="freelancer_vue_devloper_Bilzen_wed_development"
+            style="width:100%; height:auto; max-width:300px;"
           />
         </nuxt-link>
       </div>
@@ -94,7 +95,6 @@ export default {
     updateScroll() {
       //*  cross browser support -> https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY // 
       const scrollPosition = window.pageYOffset;
-      // console.log(window.pageYOffset);
       if (scrollPosition > 250) {
         this.scrollNav = true
         return
@@ -104,7 +104,6 @@ export default {
 
     checkScreen() {
       this.windowWidth = window.innerWidth;
-      //  console.log('Width :', this.windowWidth);
       if (this.windowWidth <= 768) {
         this.mobile = true
         return
@@ -152,10 +151,11 @@ header {
         margin-left: -20%;
       }
       img {
-        height: 90px;
-        @media screen and (max-width: map-get($breakpoints,mobile)) {
-          height: 70px;
-        }
+        aspect-ratio: attr(width) / attr(height);
+        // height: 90px;
+        // @media screen and (max-width: map-get($breakpoints,mobile)) {
+        //   height: 70px;
+        // }
       }
     }
     .menu {

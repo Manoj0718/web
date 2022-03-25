@@ -27,7 +27,8 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  //* page spped , adopt modern browsers //
+  modern: true,
   // Global CSS: https://go.nuxtjs.dev/config-css
   // '~/assests/global.css'
   css: ['@/assests/default.scss'],

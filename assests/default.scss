@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,700&family=Open+Sans:ital,wght@1,300&family=Roboto+Serif:wght@200&family=Roboto:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
+  font-display: swap;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
   font-family: 'Roboto Serif', sans-serif;
@@ -17,6 +19,7 @@
 .page-leave-active {
   transition: opacity 0.5s;
 }
+
 .page-enter,
 .page-leave-to {
   opacity: 0;
@@ -24,13 +27,13 @@
 
 .app {
   //background-color: #020234;
-  display:block;
+  display: block;
   //display:flex; 
-  overflow:hidden;
- // flex-direction:column;
- //height: 100vh; 
-   width : 100%;
-   height : 100%;
+  overflow: hidden;
+  // flex-direction:column;
+  //height: 100vh; 
+  width: 100%;
+  height: 100%;
 }
 
 // .button {

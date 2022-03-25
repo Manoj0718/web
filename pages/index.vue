@@ -3,7 +3,6 @@
     <textSide></textSide>
   </div>
 </template>
-
 <script>
 import { createClient } from "../plugins/Contentful";
 const client = createClient();
