@@ -24,7 +24,7 @@
           done a few networking courses and diplomas after I left school, the
           technology has had a drastic change during the last decade. After
           months of hunting for a job sharing my CVs to more than 100 companies,
-          I was finally lucky enough to get a job at ******** and then I started
+          I was finally lucky enough to get a job and then I started
           improving my Dutch language skills but I also wanted to learn the new
           trends of programming languages to create something significant.
           <br />
