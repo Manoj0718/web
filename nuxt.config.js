@@ -7,11 +7,6 @@ export default {
     color: 'blue',
     height: '5px',
   },
-  // '~/components/ParticelsComponennt.vue',
-
-  // Target: https://go.nuxtjs.dev/config-target
-  // target: 'static',
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title:

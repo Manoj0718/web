@@ -109,7 +109,7 @@ export default {
     },
     toggleSortDirection() {
       this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
-      console.log(this.sortDirection);
+      // console.log(this.sortDirection);
 
     },
     hideMenu() {

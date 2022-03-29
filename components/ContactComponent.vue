@@ -9,7 +9,7 @@
       </div>
       <div class="row_display">
         <div class="email_drop_down">
-          <p class="show_text" ref="text">123@email.com</p>
+          <p class="show_text" ref="text"></p>
           <ul>
             <li class="li">
               <a href="mailto:flyindessert@gmail.com">Open In email Client</a>
@@ -180,7 +180,6 @@ export default {
           margin: 0;
           align-items: center;
           padding: 0;
-          border: $border;
           border-radius: 10px;
         }
         p {
