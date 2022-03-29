@@ -14,7 +14,6 @@ You can directly use them in pages and other components without the need to impo
 - `<MainHeader>` | `<main-header>` (components/MainHeader.vue)
 - `<MySkillComponenet>` | `<my-skill-componenet>` (components/MySkillComponenet.vue)
 - `<ParticelsComponennt>` | `<particels-componennt>` (components/ParticelsComponennt.vue)
-- `<ProtfolioComponent>` | `<protfolio-component>` (components/ProtfolioComponent.vue)
 - `<SideBar>` | `<side-bar>` (components/SideBar.vue)
 - `<SocialMedia>` | `<social-media>` (components/SocialMedia.vue)
 - `<SocialMediaContact>` | `<social-media-contact>` (components/SocialMediaContact.vue)

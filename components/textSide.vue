@@ -1,7 +1,7 @@
 <template>
   <div class="hero_text">
     <div class="fixed_text">
-      <h1>Hello !</h1>
+      <h1>Hello!</h1>
     </div>
     <div id="animationText">
       <vue-typed-js
