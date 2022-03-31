@@ -12,6 +12,7 @@
           <p class="show_text" ref="text"></p>
           <ul>
             <li class="li">
+              flyindessert@gmail.com
               <a href="mailto:flyindessert@gmail.com">Open In email Client</a>
             </li>
             <li class="li" @click="copyText()">Copy Email Address</li>
