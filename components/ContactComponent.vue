@@ -9,10 +9,9 @@
       </div>
       <div class="row_display">
         <div class="email_drop_down">
-          <p class="show_text" ref="text"></p>
+          <p class="show_text" ref="text">flyindessert@gmail.com</p>
           <ul>
             <li class="li">
-              flyindessert@gmail.com
               <a href="mailto:flyindessert@gmail.com">Open In email Client</a>
             </li>
             <li class="li" @click="copyText()">Copy Email Address</li>
