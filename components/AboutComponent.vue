@@ -83,9 +83,9 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import "../assests/variables.scss";
-@import "../assests/mixins.scss";
-@import "../assests/breakpoints";
+@import '../assests/variables.scss';
+@import '../assests/mixins.scss';
+@import '../assests/breakpoints';
 
 #content_container {
   @include page_container;
@@ -112,7 +112,7 @@ export default {}
     padding: 10px;
     width: 250px;
     height: 250px;
-    background-image: url("../assests/Photoes/web_Developer _Bilzen_Hasselt.jpg");
+    background-image: url('../assests/Photoes/web_Developer _Bilzen_Hasselt.jpg');
     background-size: cover;
     display: block;
     margin: 25px auto;

@@ -4,23 +4,24 @@
   </div>
 </template>
 <script>
-import { createClient } from "../plugins/Contentful";
-const client = createClient();
+import { createClient } from '../plugins/Contentful'
+const client = createClient()
 export default {
   //! SEO -Local //
   head() {
     return {
       title: 'freelance web developer || Vue.js Developer',
-      meta: [{
-        hid: 'discription',
-        name: 'discription',
-        content: 'cetail'
-      },
-      {
-        hid: 'keyword',
-        name: 'keyword',
-        content: 'freelancer , webdveloper '
-      }
+      meta: [
+        {
+          hid: 'discription',
+          name: 'discription',
+          content: 'cetail',
+        },
+        {
+          hid: 'keyword',
+          name: 'keyword',
+          content: 'freelancer , webdveloper ',
+        },
       ],
     }
   },
@@ -34,15 +35,17 @@ export default {
       client.getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt',
+      }),
+    ])
+      .then(([blogs]) => {
+        //console.log("here : ", blogs);
+        //console.log("here item : ", blogs.items);
+        return {
+          blogs: blogs.items,
+        }
       })
-    ]).then(([blogs]) => {
-      console.log("here : ", blogs);
-      console.log("here item : ", blogs.items);
-      return {
-        blogs: blogs.items,
-      };
-    }).catch(console.error);
-  }
+      .catch(console.error)
+  },
 }
 </script>
 

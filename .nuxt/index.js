@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_5329ff9c from 'nuxt_plugin_plugin_5329ff9c' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_338efdbf from 'nuxt_plugin_axios_338efdbf' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_fontawesome_84cd747e from 'nuxt_plugin_fontawesome_84cd747e' // Source: .\\fontawesome.js (mode: 'all')
+import nuxt_plugin_image_1e95faba from 'nuxt_plugin_image_1e95faba' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_animejsModule_37611dcc from 'nuxt_plugin_animejsModule_37611dcc' // Source: .\\animejsModule.js (mode: 'all')
 import nuxt_plugin_vueTypical_244754d4 from 'nuxt_plugin_vueTypical_244754d4' // Source: ..\\plugins\\vue_Typical.js (mode: 'all')
 import nuxt_plugin_vueparticles_2488148e from 'nuxt_plugin_vueparticles_2488148e' // Source: ..\\plugins\\vue_particles.js (mode: 'all')
@@ -227,6 +228,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_fontawesome_84cd747e === 'function') {
     await nuxt_plugin_fontawesome_84cd747e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_image_1e95faba === 'function') {
+    await nuxt_plugin_image_1e95faba(app.context, inject)
   }
 
   if (typeof nuxt_plugin_animejsModule_37611dcc === 'function') {

@@ -3,11 +3,8 @@
     <nav class="bar">
       <div class="logo">
         <nuxt-link to="/">
-          <img
-            src="../assests/Photoes/For-Website_logo_110-JPG.jpg"
-            alt="freelancer_vue_devloper_Bilzen_wed_development"
-            style="width:100%; height:auto; max-width:300px;"
-          />
+          <nuxt-img src="/For-Website_logo_110-JPG.jpg" 
+           alt="freelancer_vue_devloper_Bilzen_wed_development"/>
         </nuxt-link>
       </div>
       <div class="menu">
@@ -39,22 +36,13 @@
         </ul>
       </div>
       <div class="iconBox">
-        <font-awesome-icon
-          :icon="sortIcon"
-          @click="toggle(), toggleSortDirection()"
-          v-show="mobile"
-          :class="{
-            'iconBox-active': mobileNav
-          }"
-        />
+        <font-awesome-icon :icon="sortIcon" @click="toggle(), toggleSortDirection()" v-show="mobile" :class="{
+          'iconBox-active': mobileNav
+        }" />
       </div>
       <transition name="mobile-nav">
-        <div
-          class="dropdown_nav-div"
-          v-show="mobileNav"
-          v-on:click.prevent="hideMenu"
-          :class="{ 'mobile-nav-leave-to': isClicked }"
-        >
+        <div class="dropdown_nav-div" v-show="mobileNav" v-on:click.prevent="hideMenu"
+          :class="{ 'mobile-nav-leave-to': isClicked }">
           <ul class="dropdown_nav">
             <li class="dropdown_nav-li">
               <NuxtLink to="/">Home</NuxtLink>
@@ -96,29 +84,30 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.updateScroll);
+    window.addEventListener('scroll', this.updateScroll)
   },
   computed: {
     sortIcon() {
-      return this.sortDirection === 'asc' ? ['fas', 'bars'] : ['fas', 'window-close'];
-    }
+      return this.sortDirection === 'asc'
+        ? ['fas', 'bars']
+        : ['fas', 'window-close']
+    },
   },
   methods: {
     toggle() {
-      this.mobileNav = !this.mobileNav;
+      this.mobileNav = !this.mobileNav
     },
     toggleSortDirection() {
-      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc'
       // console.log(this.sortDirection);
-
     },
     hideMenu() {
       // console.log("clicked");
-      this.isClicked = !this.isClicked;
+      this.isClicked = !this.isClicked
     },
     updateScroll() {
-      //*  cross browser support -> https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY // 
-      const scrollPosition = window.pageYOffset;
+      //*  cross browser support -> https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY //
+      const scrollPosition = window.pageYOffset
       if (scrollPosition > 250) {
         this.scrollNav = true
         return
@@ -127,7 +116,7 @@ export default {
     },
 
     checkScreen() {
-      this.windowWidth = window.innerWidth;
+      this.windowWidth = window.innerWidth
       if (this.windowWidth <= 768) {
         this.mobile = true
         return
@@ -141,9 +130,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assests/variables.scss";
-@import "../assests/mixins.scss";
-@import "../assests/breakpoints.scss";
+@import '../assests/variables.scss';
+@import '../assests/mixins.scss';
+@import '../assests/breakpoints.scss';
 
 header {
   position: fixed;
@@ -151,10 +140,12 @@ header {
   width: 100%;
   transition: 0.5s ease all;
   padding: 0 80px;
-  @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
     width: 100%;
     margin: 0;
   }
+
   .bar {
     position: relative;
     width: 95%;
@@ -162,23 +153,28 @@ header {
     flex-direction: raw;
     padding: 0;
     justify-content: space-between;
-    @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
       display: flex;
       margin: 2px auto;
       padding: 0;
       width: 100%;
     }
+
     .logo {
       color: $color-second_text;
       align-self: flex-start;
-      @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
         margin-left: -20%;
       }
+
       img {
         aspect-ratio: attr(width) / attr(height);
       }
     }
   }
+
   .menu {
     padding: 10px;
     align-self: center;
@@ -189,13 +185,16 @@ header {
       text-align: center;
       gap: 1em;
       cursor: pointer;
+
       span {
         visibility: hidden;
       }
+
       li {
         margin: 0 0.5rem;
         padding: 0.25rem;
         text-decoration: none;
+
         :hover span {
           visibility: visible;
           color: $color-second_text;
@@ -204,10 +203,12 @@ header {
         a {
           text-decoration: none;
         }
+
         a:visited {
           text-decoration: none;
           color: white;
         }
+
         a:hover {
           color: $color-second_text;
         }
@@ -218,33 +219,39 @@ header {
       }
     }
   }
+
   .iconBox {
-    @media screen and (max-width: map-get($breakpoints,mobile)) {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
       cursor: pointer;
       font-size: 30px;
       color: #ffd700;
       margin-right: -10vw;
       transition: transform 450ms;
     }
+
     .iconBox-active {
-      @media screen and (max-width: map-get($breakpoints,mobile)) {
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
         transform: scale(1.13);
       }
     }
   }
+
   .mobile-nav-enter-active,
   .mobile-nav-leave-active {
     transition: 1s ease all;
   }
+
   .mobile-nav-enter-from,
   .mobile-nav-leave-to {
     transform: translateX(-250px);
   }
+
   .mobil-nav-enter-to {
     transform: translateX(-1px);
   }
+
   .dropdown_nav-div {
-    @media screen and (max-width: map-get($breakpoints,mobile)) {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -262,9 +269,11 @@ header {
       -webkit-backdrop-filter: blur(10.9px);
       border: 1.5px solid rgb(0, 255, 55);
       z-index: 1;
+
       .dropdown_nav {
         list-style: none;
         margin-bottom: 2.5vh;
+
         .dropdown_nav-li {
           margin: 4vh;
           padding: 0.25vh;
@@ -285,6 +294,7 @@ header {
 .scrolled-nav {
   background-color: #020234;
   box-shadow: 5px 5px 5px #ffd700;
+
   .bar {
     padding: 0;
   }
