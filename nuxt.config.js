@@ -74,6 +74,11 @@ export default {
   ],
   image: {
     // Options
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+    },
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

@@ -2637,13 +2637,13 @@ function shouldScrollToTop(route) {
 
 
 
-const _92a3ab3c = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 8).then(__webpack_require__.bind(null, 112)));
+const _92a3ab3c = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 8).then(__webpack_require__.bind(null, 109)));
 
-const _736c2396 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 9).then(__webpack_require__.bind(null, 113)));
+const _736c2396 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 9).then(__webpack_require__.bind(null, 110)));
 
-const _b5f43012 = () => interopDefault(__webpack_require__.e(/* import() | pages/protfolio */ 11).then(__webpack_require__.bind(null, 114)));
+const _b5f43012 = () => interopDefault(__webpack_require__.e(/* import() | pages/protfolio */ 11).then(__webpack_require__.bind(null, 111)));
 
-const _5333f5b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 10).then(__webpack_require__.bind(null, 115)));
+const _5333f5b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 10).then(__webpack_require__.bind(null, 112)));
 
 const emptyFn = () => {};
 
@@ -3606,18 +3606,18 @@ function mergeProperty(storeModule, moduleData, property) {
   }
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
-const AboutComponent = () => __webpack_require__.e(/* import() | components/about-component */ 1).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
-const ContactComponent = () => __webpack_require__.e(/* import() | components/contact-component */ 2).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
-const ContactForm = () => __webpack_require__.e(/* import() | components/contact-form */ 3).then(__webpack_require__.bind(null, 74)).then(c => wrapFunctional(c.default || c));
-const LetConnectAnime = () => __webpack_require__.e(/* import() | components/let-connect-anime */ 4).then(__webpack_require__.bind(null, 82)).then(c => wrapFunctional(c.default || c));
+const AboutComponent = () => __webpack_require__.e(/* import() | components/about-component */ 1).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
+const ContactComponent = () => __webpack_require__.e(/* import() | components/contact-component */ 2).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
+const ContactForm = () => __webpack_require__.e(/* import() | components/contact-form */ 3).then(__webpack_require__.bind(null, 73)).then(c => wrapFunctional(c.default || c));
+const LetConnectAnime = () => __webpack_require__.e(/* import() | components/let-connect-anime */ 4).then(__webpack_require__.bind(null, 78)).then(c => wrapFunctional(c.default || c));
 const MainHeader = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 62)).then(c => wrapFunctional(c.default || c));
-const MySkillComponenet = () => __webpack_require__.e(/* import() | components/my-skill-componenet */ 5).then(__webpack_require__.bind(null, 81)).then(c => wrapFunctional(c.default || c));
+const MySkillComponenet = () => __webpack_require__.e(/* import() | components/my-skill-componenet */ 5).then(__webpack_require__.bind(null, 113)).then(c => wrapFunctional(c.default || c));
 const ParticelsComponennt = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 63)).then(c => wrapFunctional(c.default || c));
 const SideBar = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 54)).then(c => wrapFunctional(c.default || c));
 const SocialMedia = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 64)).then(c => wrapFunctional(c.default || c));
 const SocialMediaContact = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 36)).then(c => wrapFunctional(c.default || c));
-const TextSide = () => __webpack_require__.e(/* import() | components/text-side */ 6).then(__webpack_require__.bind(null, 116)).then(c => wrapFunctional(c.default || c));
-const UsedTechComponent = () => __webpack_require__.e(/* import() | components/used-tech-component */ 7).then(__webpack_require__.bind(null, 117)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
+const TextSide = () => __webpack_require__.e(/* import() | components/text-side */ 6).then(__webpack_require__.bind(null, 114)).then(c => wrapFunctional(c.default || c));
+const UsedTechComponent = () => __webpack_require__.e(/* import() | components/used-tech-component */ 7).then(__webpack_require__.bind(null, 115)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
 
 function wrapFunctional(options) {
   if (!options || !options.functional) {

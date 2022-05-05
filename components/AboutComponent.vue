@@ -1,9 +1,12 @@
 <template>
   <div id="content_container">
     <div class="content_side">
-      <div class="round-image"></div>
+      <div class="round-image">
+        <nuxt-img src = "/web_Developer _Bilzen_Hasselt.png" 
+       fit="contain"></nuxt-img>
+      </div>
       <div class="skill">
-        <MySkillComponenet></MySkillComponenet>
+        <LazyMySkillComponenet></LazyMySkillComponenet>
       </div>
     </div>
     <div class="content_side">
@@ -109,16 +112,14 @@ export default {}
     }
   }
   .round-image {
-    padding: 10px;
-    width: 250px;
-    height: 250px;
-    background-image: url('../assests/Photoes/web_Developer _Bilzen_Hasselt.jpg');
-    background-size: cover;
-    display: block;
-    margin: 25px auto;
-    border-radius: 125px;
+    position: relative;
     align-items: center;
-    text-align: center;
+    padding: 5px;
+    img {
+      border-radius: 50%;
+      width: 75%;
+      height: auto;
+    }
   }
   .skill {
     color: $nav_text_color;
