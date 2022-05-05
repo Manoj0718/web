@@ -3,7 +3,7 @@
     <div class="content_side">
       <div class="round-image">
         <nuxt-img src = "/web_Developer _Bilzen_Hasselt.png" 
-       fit="contain"></nuxt-img>
+       fit="contain" format="webp"></nuxt-img>
       </div>
       <div class="skill">
         <LazyMySkillComponenet></LazyMySkillComponenet>
