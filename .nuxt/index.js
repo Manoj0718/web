@@ -15,6 +15,7 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_5329ff9c from 'nuxt_plugin_plugin_5329ff9c' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_338efdbf from 'nuxt_plugin_axios_338efdbf' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_vlazyload_18cf8f6d from 'nuxt_plugin_vlazyload_18cf8f6d' // Source: .\\v-lazy-load.js (mode: 'all')
 import nuxt_plugin_fontawesome_84cd747e from 'nuxt_plugin_fontawesome_84cd747e' // Source: .\\fontawesome.js (mode: 'all')
 import nuxt_plugin_image_1e95faba from 'nuxt_plugin_image_1e95faba' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_animejsModule_37611dcc from 'nuxt_plugin_animejsModule_37611dcc' // Source: .\\animejsModule.js (mode: 'all')
@@ -61,7 +62,7 @@ Object.defineProperty(Vue.prototype, '$nuxt', {
 
 Vue.use(Meta, {"keyName":"head","attribute":"data-n-head","ssrAttribute":"data-n-head-ssr","tagIDKeyName":"hid"})
 
-const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
+const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 const originalRegisterModule = Vuex.Store.prototype.registerModule
 
@@ -80,9 +81,6 @@ async function createApp(ssrContext, config = {}) {
   const store = createStore(ssrContext)
   // Add this.$router into store actions/mutations
   store.$router = router
-
-  // Fix SSR caveat https://github.com/nuxt/nuxt.js/issues/3757#issuecomment-414689141
-  store.registerModule = registerModule
 
   // Create Root instance
 
@@ -224,6 +222,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_338efdbf === 'function') {
     await nuxt_plugin_axios_338efdbf(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vlazyload_18cf8f6d === 'function') {
+    await nuxt_plugin_vlazyload_18cf8f6d(app.context, inject)
   }
 
   if (typeof nuxt_plugin_fontawesome_84cd747e === 'function') {

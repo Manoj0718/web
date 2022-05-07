@@ -28,6 +28,7 @@
     "contentful": "^9.1.12",
     "core-js": "^3.19.3",
     "nuxt": "^2.2.0",
+    "nuxt-lazy-load": "^1.2.9",
     "particles.vue": "^2.21.0",
     "vee-validate": "^3.4.14",
     "vue": "^2.6.14",

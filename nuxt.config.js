@@ -24,6 +24,7 @@ export default {
   },
   //* page spped , adopt modern browsers //
   modern: true,
+  ssr: false,
   // Global CSS: https://go.nuxtjs.dev/config-css
   // '~/assests/global.css'
   css: ['@/assests/default.scss'],
@@ -70,6 +71,7 @@ export default {
   modules: [
     //'@nuxt/image',
     // https://go.nuxtjs.dev/axios
+    'nuxt-lazy-load',
     '@nuxtjs/axios',
   ],
   image: {
@@ -88,6 +90,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    aggressiveCodeRemoval: true,
     // transpile : ['vue-typical']
     // Add exception
     // build error parse
