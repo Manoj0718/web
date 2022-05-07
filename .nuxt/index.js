@@ -15,7 +15,6 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_5329ff9c from 'nuxt_plugin_plugin_5329ff9c' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_338efdbf from 'nuxt_plugin_axios_338efdbf' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_vlazyload_18cf8f6d from 'nuxt_plugin_vlazyload_18cf8f6d' // Source: .\\v-lazy-load.js (mode: 'all')
 import nuxt_plugin_fontawesome_84cd747e from 'nuxt_plugin_fontawesome_84cd747e' // Source: .\\fontawesome.js (mode: 'all')
 import nuxt_plugin_image_1e95faba from 'nuxt_plugin_image_1e95faba' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_animejsModule_37611dcc from 'nuxt_plugin_animejsModule_37611dcc' // Source: .\\animejsModule.js (mode: 'all')
@@ -222,10 +221,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_338efdbf === 'function') {
     await nuxt_plugin_axios_338efdbf(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_vlazyload_18cf8f6d === 'function') {
-    await nuxt_plugin_vlazyload_18cf8f6d(app.context, inject)
   }
 
   if (typeof nuxt_plugin_fontawesome_84cd747e === 'function') {

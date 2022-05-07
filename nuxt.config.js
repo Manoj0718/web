@@ -71,7 +71,7 @@ export default {
   modules: [
     //'@nuxt/image',
     // https://go.nuxtjs.dev/axios
-    'nuxt-lazy-load',
+    // 'nuxt-lazy-load',
     '@nuxtjs/axios',
   ],
   image: {
