@@ -24,7 +24,7 @@ export default {
   },
   //* page spped , adopt modern browsers //
   modern: true,
-  ssr: false,
+  //ssr: false,
   // Global CSS: https://go.nuxtjs.dev/config-css
   // '~/assests/global.css'
   css: ['@/assests/default.scss'],
@@ -90,7 +90,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    //aggressiveCodeRemoval: true,
+    aggressiveCodeRemoval: true,
     // transpile : ['vue-typical']
     // Add exception
     // build error parse
