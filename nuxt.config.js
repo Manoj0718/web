@@ -90,7 +90,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    aggressiveCodeRemoval: true,
+    //aggressiveCodeRemoval: true,
     // transpile : ['vue-typical']
     // Add exception
     // build error parse

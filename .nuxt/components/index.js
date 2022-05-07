@@ -1,15 +1,15 @@
-export { default as AboutComponent } from '../..\\components\\AboutComponent.vue'
-export { default as ContactComponent } from '../..\\components\\ContactComponent.vue'
-export { default as ContactForm } from '../..\\components\\ContactForm.vue'
-export { default as LetConnectAnime } from '../..\\components\\LetConnectAnime.vue'
-export { default as MainHeader } from '../..\\components\\MainHeader.vue'
-export { default as MySkillComponenet } from '../..\\components\\MySkillComponenet.vue'
-export { default as ParticelsComponennt } from '../..\\components\\ParticelsComponennt.vue'
-export { default as SideBar } from '../..\\components\\SideBar.vue'
-export { default as SocialMedia } from '../..\\components\\SocialMedia.vue'
-export { default as SocialMediaContact } from '../..\\components\\SocialMediaContact.vue'
-export { default as TextSide } from '../..\\components\\textSide.vue'
-export { default as UsedTechComponent } from '../..\\components\\UsedTechComponent.vue'
+export const AboutComponent = () => import('../..\\components\\AboutComponent.vue' /* webpackChunkName: "components/about-component" */).then(c => wrapFunctional(c.default || c))
+export const ContactComponent = () => import('../..\\components\\ContactComponent.vue' /* webpackChunkName: "components/contact-component" */).then(c => wrapFunctional(c.default || c))
+export const ContactForm = () => import('../..\\components\\ContactForm.vue' /* webpackChunkName: "components/contact-form" */).then(c => wrapFunctional(c.default || c))
+export const LetConnectAnime = () => import('../..\\components\\LetConnectAnime.vue' /* webpackChunkName: "components/let-connect-anime" */).then(c => wrapFunctional(c.default || c))
+export const MainHeader = () => import('../..\\components\\MainHeader.vue' /* webpackChunkName: "components/main-header" */).then(c => wrapFunctional(c.default || c))
+export const MySkillComponenet = () => import('../..\\components\\MySkillComponenet.vue' /* webpackChunkName: "components/my-skill-componenet" */).then(c => wrapFunctional(c.default || c))
+export const ParticelsComponennt = () => import('../..\\components\\ParticelsComponennt.vue' /* webpackChunkName: "components/particels-componennt" */).then(c => wrapFunctional(c.default || c))
+export const SideBar = () => import('../..\\components\\SideBar.vue' /* webpackChunkName: "components/side-bar" */).then(c => wrapFunctional(c.default || c))
+export const SocialMedia = () => import('../..\\components\\SocialMedia.vue' /* webpackChunkName: "components/social-media" */).then(c => wrapFunctional(c.default || c))
+export const SocialMediaContact = () => import('../..\\components\\SocialMediaContact.vue' /* webpackChunkName: "components/social-media-contact" */).then(c => wrapFunctional(c.default || c))
+export const TextSide = () => import('../..\\components\\textSide.vue' /* webpackChunkName: "components/text-side" */).then(c => wrapFunctional(c.default || c))
+export const UsedTechComponent = () => import('../..\\components\\UsedTechComponent.vue' /* webpackChunkName: "components/used-tech-component" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
