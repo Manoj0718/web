@@ -3,8 +3,7 @@
     <nav class="bar">
       <div class="logo">
         <nuxt-link to="/">
-          <nuxt-img src="/For-Website_logo_110-JPG.jpg" 
-           alt="freelancer_vue_devloper_Bilzen_wed_development"/>
+          <nuxt-img src="\~/For-Website_logo_110-JPG.jpg" alt="freelancer_vue_devloper_Bilzen_wed_development" />
         </nuxt-link>
       </div>
       <div class="menu">
