@@ -1,0 +1,47 @@
+{
+  "AboutComponent": {
+    "description": "Auto imported from components/AboutComponent.vue"
+  },
+  "ContactComponent": {
+    "description": "Auto imported from components/ContactComponent.vue"
+  },
+  "ContactForm": {
+    "description": "Auto imported from components/ContactForm.vue"
+  },
+  "LetConnectAnime": {
+    "description": "Auto imported from components/LetConnectAnime.vue"
+  },
+  "Logoheader": {
+    "description": "Auto imported from components/Logoheader.vue"
+  },
+  "MainHeader": {
+    "description": "Auto imported from components/MainHeader.vue"
+  },
+  "MobileMenu": {
+    "description": "Auto imported from components/MobileMenu.vue"
+  },
+  "MySkillComponenet": {
+    "description": "Auto imported from components/MySkillComponenet.vue"
+  },
+  "NavbarLinks": {
+    "description": "Auto imported from components/NavbarLinks.vue"
+  },
+  "ParticelsComponennt": {
+    "description": "Auto imported from components/ParticelsComponennt.vue"
+  },
+  "SideBar": {
+    "description": "Auto imported from components/SideBar.vue"
+  },
+  "SocialMedia": {
+    "description": "Auto imported from components/SocialMedia.vue"
+  },
+  "SocialMediaContact": {
+    "description": "Auto imported from components/SocialMediaContact.vue"
+  },
+  "TextSide": {
+    "description": "Auto imported from components/text-Side.vue"
+  },
+  "UsedTechComponent": {
+    "description": "Auto imported from components/UsedTechComponent.vue"
+  }
+}
