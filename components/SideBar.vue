@@ -17,19 +17,21 @@
 #socila_mediaBar {
   background-color: $color-second_text;
   // #f5eff5;
-  height: 100vh;
+  height: 75vh;
   width: 2px;
   margin-left: 50px;
+  margin-top:10%;
   z-index: 1;
-  position: absolute;
+  // position: absolute;
   position: fixed;
 
   .icons {
     position: relative;
-    top: 60vh;
+    top: 50%;
     right: 35px;
   }
-  @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
     display: none;
   }
 }

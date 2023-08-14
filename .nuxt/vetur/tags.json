@@ -11,11 +11,20 @@
   "LetConnectAnime": {
     "description": "Auto imported from components/LetConnectAnime.vue"
   },
+  "Logoheader": {
+    "description": "Auto imported from components/Logoheader.vue"
+  },
   "MainHeader": {
     "description": "Auto imported from components/MainHeader.vue"
   },
+  "MobileMenu": {
+    "description": "Auto imported from components/MobileMenu.vue"
+  },
   "MySkillComponenet": {
     "description": "Auto imported from components/MySkillComponenet.vue"
+  },
+  "NavbarLinks": {
+    "description": "Auto imported from components/NavbarLinks.vue"
   },
   "ParticelsComponennt": {
     "description": "Auto imported from components/ParticelsComponennt.vue"
@@ -30,7 +39,7 @@
     "description": "Auto imported from components/SocialMediaContact.vue"
   },
   "TextSide": {
-    "description": "Auto imported from components/textSide.vue"
+    "description": "Auto imported from components/text-Side.vue"
   },
   "UsedTechComponent": {
     "description": "Auto imported from components/UsedTechComponent.vue"

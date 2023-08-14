@@ -1,6 +1,6 @@
 <template>
   <div id="page_layout">
-    <textSide></textSide>
+    <text-Side></text-Side>
   </div>
 </template>
 <script>
@@ -10,7 +10,7 @@ export default {
   //! SEO -Local //
   head() {
     return {
-      title: 'freelance web developer || Vue.js Developer',
+      title: 'Freelance web developer || Vue.js Developer',
       meta: [
         {
           hid: 'discription',
@@ -20,7 +20,7 @@ export default {
         {
           hid: 'keyword',
           name: 'keyword',
-          content: 'freelancer , webdveloper ',
+          content: 'Freelancer , webdveloper ',
         },
       ],
     }
@@ -54,7 +54,7 @@ export default {
   // height: 100%;
   // #app is flex, so nav bar and #page_layout need to fill the page //
   flex-grow: 1;
-  height: 100vh;
+
 
   // margin :5vh auto;
 }

@@ -27,6 +27,8 @@ export default {
 
     .conatiner {
         border: $border;
+        box-shadow: 0 0 10px $shadowColor;
+        /* Adjust spread value for desired depth 4D effect */
         padding: 10px;
         margin: 10px;
         flex-grow: 1;

@@ -10,7 +10,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title:
-      'Freelance Web Developer || freelance frontend Javascript Developer || create your website  ',
+      'Freelance Web Developer || Freelance frontend Javascript Developer || create your website  ',
     htmlAttrs: {
       lang: 'en',
     },
@@ -59,6 +59,8 @@ export default {
     [
       '@nuxtjs/fontawesome',
       {
+        //component: 'Fa',
+        //suffix: true, //ional: Set to true if you want to use the "fa" suffix (e.g., "fa-camera") for icons.
         icons: {
           solid: true,
           brands: true,

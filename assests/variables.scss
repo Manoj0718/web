@@ -1,9 +1,23 @@
 $color-second_text : #FFD700;
 $nav_text_color : #F5EFF5;
-$border : 2px solid rgb(43, 255, 0);
+$border : 2px solid hsla(110, 50%, 50%, 0.311);
+$shadowColor: hsla(110, 100%, 50%, 0.907); // add 4d effects //
 $steps: 30;
 $line_color : rgb(43, 255, 0);
 
+
+//? Main header ---------//
+$primary-color: #333;
+$scroll-nav-color: #fff;
+$scroll-nav-background: #333;
+
+@mixin center-vertically {
+  display: flex;
+  align-items: center;
+}
+
+// Breakpoints
+$breakpoint-mobile: 768px;
 //! -------  Start Animation List -------------------- //
 
 

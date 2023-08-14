@@ -1,6 +1,11 @@
 <template>
   <div id="page_protofolio">
+    <div class="skill">
+      <LazyMySkillComponenet></LazyMySkillComponenet>
+    </div>
+    <h1 class="topic">Projects</h1>
     <div id="container">
+
       <div class="scroll_site" v-for="blog in blogs" :key="blog.fields.no">
         <h2>{{ blog.fields.title }}</h2>
         <div class="picture">
@@ -12,10 +17,13 @@
           <br />
         </p>
 
-        <span v-if="readMore"></span>
-        <span v-else></span>
-        <div v-show="readMore">
-          <h2>what i learned</h2>
+        <button @click="toggleReadMore(blog)" class="btn">
+          <span v-if="!blog.readMore">Read More</span>
+          <span v-else>Read Less</span>
+        </button>
+
+        <div v-if="blog.readMore">
+          <h2>What I Learned</h2>
           <br />
           <ul v-for="lesson in blog.fields.lessons" :key="lesson" style="list-style-type: none">
             <li>{{ lesson }}</li>
@@ -37,10 +45,6 @@
             </template>
           </div>
         </div>
-        <button @click.prevent="readMore = !readMore" class="btn">
-          <span v-if="readMore">Read Less</span>
-          <span v-else>Read More</span>
-        </button>
       </div>
     </div>
   </div>
@@ -54,7 +58,7 @@ export default {
   data() {
     return {
       blogs: [],
-      readMore: false
+      // readMore: false
     }
   },
 
@@ -67,11 +71,17 @@ export default {
     ])
       .then(([blogs]) => {
         return {
-          blogs: blogs.items,
+          blogs: blogs.items.map(blog => ({ ...blog, readMore: false }))
         }
       })
       .catch(console.error)
   },
+  methods: {
+    toggleReadMore(blog) {
+      console.log(blog);
+      blog.readMore = !blog.readMore;
+    }
+  }
 }
 </script>
 
@@ -83,28 +93,46 @@ export default {
 #page_protofolio {
   @include page_margins;
   height: 100%;
-  @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
     @include mobile_page_margin;
   }
+
+  .skill {
+    color: $nav_text_color;
+  }
+
+  .topic {
+    color: white;
+    margin: 5vh;
+    text-align: center;
+  }
+
   #container {
     //width: 100%;
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
-    @media screen and(max-width: map-get($breakpoints,mobile)) {
+    margin-top: 5vh;
+
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: 100%;
       @include mobile_page_container;
     }
-    @media screen and(max-width: map-get($breakpoints,tablet)) {
+
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: 100%;
       @include mobile_page_container;
     }
+
+
+
     h2 {
       font-size: 16px;
     }
@@ -116,13 +144,16 @@ export default {
       flex: 1;
       height: 100%;
       text-align: center;
-      border: 0.1px solid rgb(43, 255, 0);
+      border: 0.1px solid rgba(43, 255, 0, 0.833);
+
       .picture {
         margin: 5vh 0;
+
         img {
           height: 50%;
           width: 90%;
-          @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+          @media screen and (max-width: map-get($breakpoints, mobile)) {
             height: 100%;
             width: 100%;
           }
@@ -132,9 +163,11 @@ export default {
       .used_tech_div {
         margin: 10px;
       }
+
       .buttons_protofolio {
         margin: 10px;
-        @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
           margin: 2.5vh;
           display: flex;
           flex-direction: column;
@@ -144,7 +177,8 @@ export default {
           padding: 2.5vh;
           margin: 2vh;
           @include button_cybre-btn;
-          @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+          @media screen and (max-width: map-get($breakpoints, mobile)) {
             padding: 1vh;
           }
         }
@@ -153,6 +187,7 @@ export default {
           background: $line_color;
         }
       }
+
       .btn {
         @include button_cybre-btn;
         border: $border;
@@ -161,12 +196,14 @@ export default {
         background-color: $line_color;
         font-weight: bold;
       }
-      @media screen and (max-width: map-get($breakpoints,mobile)) {
+
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
         text-align: center;
         width: 100%;
         @include section_devider;
       }
-      @media screen and (max-width: map-get($breakpoints,tablet)) {
+
+      @media screen and (max-width: map-get($breakpoints, tablet)) {
         text-align: center;
         width: 100%;
         @include section_devider;

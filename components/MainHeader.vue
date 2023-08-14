@@ -1,11 +1,11 @@
 <template>
-  <header :class="{ 'scrolled-nav': scrollNav }">
+  <header :class="{ 'scrolled-nav': scrolledNav }">
     <nav class="bar">
-      <div class="logo">
+      <!-- <div class="logo">
         <nuxt-link to="/">
           <nuxt-img src="\~/For-Website_logo_110-JPG.jpg" alt="freelancer_vue_devloper_Bilzen_wed_development" />
         </nuxt-link>
-      </div>
+      </div> -->
       <div class="menu">
         <ul style="list-style-type: none" v-show="!mobile">
           <li>
@@ -35,13 +35,13 @@
         </ul>
       </div>
       <div class="iconBox">
-        <font-awesome-icon :icon="sortIcon" @click="toggle(), toggleSortDirection()" v-show="mobile" :class="{
+        <font-awesome-icon :icon="['fas', 'bars']" @click="toggle(), toggleSortDirection()" v-show="mobile" :class="{
           'iconBox-active': mobileNav
         }" />
       </div>
       <transition name="mobile-nav">
         <div class="dropdown_nav-div" v-show="mobileNav" v-on:click.prevent="hideMenu"
-          :class="{ 'mobile-nav-leave-to': isClicked }">
+          :class="{ 'mobile-nav-leave-to': isClicked, 'mobile-nav-hide': sortDirection === true }">
           <ul class="dropdown_nav">
             <li class="dropdown_nav-li">
               <NuxtLink to="/">Home</NuxtLink>
@@ -67,12 +67,13 @@
 export default {
   data() {
     return {
-      scrollNav: null,
+      scrolledNav: null,
       mobile: null,
       mobileNav: null,
       windowWidth: null,
       isClicked: false,
-      sortDirection: 'asc',
+      sortDirection: null,
+
     }
   },
 
@@ -86,32 +87,43 @@ export default {
     window.addEventListener('scroll', this.updateScroll)
   },
   computed: {
-    sortIcon() {
-      return this.sortDirection === 'asc'
-        ? ['fas', 'bars']
-        : ['fas', 'window-close']
-    },
+
+    // sortIcon() {
+    //   return this.sortDirection === 'asc'
+    //     ? ['fas', 'bars']
+    //     : ['fas', 'window-close']
+    // },
   },
   methods: {
     toggle() {
-      this.mobileNav = !this.mobileNav
+      console.log('click');
+      this.mobileNav = !this.mobileNav;
+
     },
     toggleSortDirection() {
-      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc'
-      // console.log(this.sortDirection);
+      this.sortDirection = !this.sortDirection;
+      console.log(this.sortDirection);
+      //   this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc'
+
     },
     hideMenu() {
-      // console.log("clicked");
-      this.isClicked = !this.isClicked
+      this.isClicked = !this.isClicked;
+      console.log('direction', this.sortDirection);
+      if (this.sortDirection === true) {
+        console.log('hide');
+        this.isClicked === false;
+      }
+
+      // this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc'
     },
     updateScroll() {
       //*  cross browser support -> https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY //
-      const scrollPosition = window.pageYOffset
+      const scrollPosition = window.scrollY;
       if (scrollPosition > 250) {
-        this.scrollNav = true
+        this.scrolledNav = true
         return
       }
-      this.scrollNav = false
+      this.scrolledNav = false
     },
 
     checkScreen() {
@@ -131,7 +143,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assests/variables.scss';
 @import '../assests/mixins.scss';
-@import '../assests/breakpoints.scss';
+@import '../assests/_breakpoints.scss';
 
 header {
   position: fixed;
@@ -139,6 +151,7 @@ header {
   width: 100%;
   transition: 0.5s ease all;
   padding: 0 80px;
+  border: 1px solid white;
 
   @media screen and (max-width: map-get($breakpoints, mobile)) {
     width: 100%;
@@ -176,7 +189,7 @@ header {
 
   .menu {
     padding: 10px;
-    align-self: center;
+    margin: auto;
 
     ul {
       display: flex;
@@ -225,14 +238,23 @@ header {
       font-size: 30px;
       color: #ffd700;
       margin-right: -10vw;
-      transition: transform 450ms;
+      // transition: transform 450ms;
+      transition: all ease .8s;
     }
 
     .iconBox-active {
+      transform: rotate(180deg);
+
       @media screen and (max-width: map-get($breakpoints, mobile)) {
-        transform: scale(1.13);
+        transform: rotate(180deg);
       }
     }
+
+    // &.isClicked {
+    //   @media screen and (max-width: map-get($breakpoints, mobile)) {
+    //     background-color: red;
+    //   }
+    // }
   }
 
   .mobile-nav-enter-active,
@@ -245,8 +267,12 @@ header {
     transform: translateX(-250px);
   }
 
-  .mobil-nav-enter-to {
+  .mobile-nav-enter-to {
     transform: translateX(-1px);
+  }
+
+  .mobile-nav-hide {
+    display: none;
   }
 
   .dropdown_nav-div {
@@ -299,7 +325,3 @@ header {
   }
 }
 </style>
-
-
-
-// :icon="['fas', 'bars']"
