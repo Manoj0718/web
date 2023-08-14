@@ -1,4 +1,5 @@
 # protfolio
+used Nuxt.js,contentful
 
 ## Build Setup
 
