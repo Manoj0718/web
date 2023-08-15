@@ -157,7 +157,7 @@ export default {
       }
 
       .cybr-btn:hover {
-        background: $line_color;
+        background: hwb(140 25% 25% / 0.516);
         box-shadow: 0 0 25px $shadowColor;
       }
 

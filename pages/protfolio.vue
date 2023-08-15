@@ -193,8 +193,14 @@ export default {
         border: $border;
         margin: 10px;
         text-align: center;
-        background-color: $line_color;
         font-weight: bold;
+        box-shadow: 1px 1px 10px $shadowColor;
+        background-color: $line_color;
+
+        &:hover {
+          box-shadow: 1px 1px 10px $shadowColor;
+          background-color: hwb(110 25% 25% / 0.311);
+        }
       }
 
       @media screen and (max-width: map-get($breakpoints, mobile)) {
