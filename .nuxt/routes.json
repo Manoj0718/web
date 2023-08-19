@@ -2,29 +2,29 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "G:\\\\MyProject\\\\My Work\\\\protfolio\\\\pages\\\\about.vue",
+    "component": "G:\\\\My personal Project\\\\My Work\\\\protfolio\\\\pages\\\\about.vue",
     "chunkName": "pages/about",
-    "_name": "_92a3ab3c"
+    "_name": "_3e1feae2"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "G:\\\\MyProject\\\\My Work\\\\protfolio\\\\pages\\\\contact.vue",
+    "component": "G:\\\\My personal Project\\\\My Work\\\\protfolio\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact",
-    "_name": "_736c2396"
+    "_name": "_384d8eb5"
   },
   {
     "name": "protfolio",
     "path": "/protfolio",
-    "component": "G:\\\\MyProject\\\\My Work\\\\protfolio\\\\pages\\\\protfolio.vue",
+    "component": "G:\\\\My personal Project\\\\My Work\\\\protfolio\\\\pages\\\\protfolio.vue",
     "chunkName": "pages/protfolio",
-    "_name": "_b5f43012"
+    "_name": "_b6b92f12"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "G:\\\\MyProject\\\\My Work\\\\protfolio\\\\pages\\\\index.vue",
+    "component": "G:\\\\My personal Project\\\\My Work\\\\protfolio\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_5333f5b2"
+    "_name": "_5dd7c5a7"
   }
 ]
