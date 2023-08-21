@@ -13,11 +13,11 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_2f90fac8 from 'nuxt_plugin_plugin_2f90fac8' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_axios_32edfe82 from 'nuxt_plugin_axios_32edfe82' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_fontawesome_7fc508c1 from 'nuxt_plugin_fontawesome_7fc508c1' // Source: .\\fontawesome.js (mode: 'all')
-import nuxt_plugin_image_5ce0048c from 'nuxt_plugin_image_5ce0048c' // Source: .\\image.js (mode: 'all')
-import nuxt_plugin_animejsModule_1da820cc from 'nuxt_plugin_animejsModule_1da820cc' // Source: .\\animejsModule.js (mode: 'all')
+import nuxt_plugin_plugin_5e57371f from 'nuxt_plugin_plugin_5e57371f' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_656dbc7c from 'nuxt_plugin_axios_656dbc7c' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_fontawesome_ba49c8f8 from 'nuxt_plugin_fontawesome_ba49c8f8' // Source: .\\fontawesome.js (mode: 'all')
+import nuxt_plugin_image_8f5fc286 from 'nuxt_plugin_image_8f5fc286' // Source: .\\image.js (mode: 'all')
+import nuxt_plugin_animejsModule_58f6e262 from 'nuxt_plugin_animejsModule_58f6e262' // Source: .\\animejsModule.js (mode: 'all')
 import nuxt_plugin_vueTypical_244754d4 from 'nuxt_plugin_vueTypical_244754d4' // Source: ..\\plugins\\vue_Typical.js (mode: 'all')
 import nuxt_plugin_vueparticles_2488148e from 'nuxt_plugin_vueparticles_2488148e' // Source: ..\\plugins\\vue_particles.js (mode: 'all')
 import nuxt_plugin_veevalidate_1a0c1998 from 'nuxt_plugin_veevalidate_1a0c1998' // Source: ..\\plugins\\vee-validate.js (mode: 'all')
@@ -219,24 +219,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_2f90fac8 === 'function') {
-    await nuxt_plugin_plugin_2f90fac8(app.context, inject)
+  if (typeof nuxt_plugin_plugin_5e57371f === 'function') {
+    await nuxt_plugin_plugin_5e57371f(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_32edfe82 === 'function') {
-    await nuxt_plugin_axios_32edfe82(app.context, inject)
+  if (typeof nuxt_plugin_axios_656dbc7c === 'function') {
+    await nuxt_plugin_axios_656dbc7c(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_fontawesome_7fc508c1 === 'function') {
-    await nuxt_plugin_fontawesome_7fc508c1(app.context, inject)
+  if (typeof nuxt_plugin_fontawesome_ba49c8f8 === 'function') {
+    await nuxt_plugin_fontawesome_ba49c8f8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_image_5ce0048c === 'function') {
-    await nuxt_plugin_image_5ce0048c(app.context, inject)
+  if (typeof nuxt_plugin_image_8f5fc286 === 'function') {
+    await nuxt_plugin_image_8f5fc286(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_animejsModule_1da820cc === 'function') {
-    await nuxt_plugin_animejsModule_1da820cc(app.context, inject)
+  if (typeof nuxt_plugin_animejsModule_58f6e262 === 'function') {
+    await nuxt_plugin_animejsModule_58f6e262(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueTypical_244754d4 === 'function') {
