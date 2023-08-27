@@ -2,7 +2,7 @@
   "name": "protfolio",
   "version": "1.0.0",
   "engines": {
-    "node": "18.x",
+    "node": "16.x",
     "npm": "8.0.0"
   },
   "private": true,
