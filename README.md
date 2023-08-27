@@ -1,5 +1,4 @@
 # protfolio
-
 "particles.vue": "^2.21.0",
 used Nuxt.js,contentful
 
