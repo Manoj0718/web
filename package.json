@@ -28,6 +28,7 @@
     "contentful": "^9.1.12",
     "core-js": "^ 3.32.1",
     "node": "^18.17.01",
+    "npm": "^8.0.0",
     "nuxt": "^2.2.0",
     "particles.vue": "^2.43.1",
     "vee-validate": "^3.4.14",
@@ -54,7 +55,7 @@
     "postcss": "^8.4.28 ",
     "prettier": "^2.5.1",
     "sass": "^ 1.66.1 ",
-    "sass-loader": "^10.2.0",
-    "webpack": "^4.46.0"
+    "sass-loader": "^10.4.1",
+    "webpack": "^4.36.0"
   }
 }
