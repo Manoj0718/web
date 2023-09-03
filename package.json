@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build && vercel build",
     "heroku-postbuild": "npm run build",
     "start": "nuxt start",
     "generate": "nuxt generate",
