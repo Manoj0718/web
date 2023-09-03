@@ -91,8 +91,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
+  generate: {
     dir: 'dist',
+  },
+  build: {
+    // dir: 'dist',
     aggressiveCodeRemoval: true,
     // transpile : ['vue-typical']
     // Add exception
