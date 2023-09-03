@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/contact", {data:[{_img:{"/_ipx/_/Website_logo.png":"\u002F_nuxt\u002Fimage\u002Fed76c7.png"}}],fetch:{},mutations:[]});
