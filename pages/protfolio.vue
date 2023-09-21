@@ -38,8 +38,9 @@
 
           <!-- //* button *// -->
           <div class="buttons_protofolio">
-            <a class="cybr-btn" :href="blog.fields.github" target="_blank">GitHub</a>
-
+            <div v-if="blog.fields.github !== 'none'">
+              <a class=" cybr-btn" :href="blog.fields.github" target="_blank">GitHub</a>
+            </div>
             <template v-if="blog.fields.liveLink !== 'none'">
               <a class="cybr-btn" :href="blog.fields.liveLink" target="_blank">Watch It Live_</a>
             </template>
