@@ -10,7 +10,8 @@
     </div>
     <div class="content_side">
       <div class="text">
-        <p>
+        <p> <strong>Long Version of My Story (if you’re interested!)</strong></p> <br>
+        <p><br>
           Moving to Belgium a few years ago was a significant turning point in my life. With a background in Marketing and
           a decade of experience in the field, I faced the challenge of finding employment due to language barriers. As I
           did not speak Dutch at the time, I was worried about how I could effectively express my ideas and connect with
@@ -59,7 +60,7 @@
               it, anybody can do it. It's possible. And It's your turn. So go
               for it. It's never too late to become what you always wanted to be
               in the first place." <span>😇</span>
-              <br />J. Michael Straczynski
+              <br />J. Michael Straczynski<span>🙄</span><span>🤖</span><span>🤓</span>
             </em>
           </strong>
         </p>
